@@ -139,14 +139,14 @@ void avoidObstacle() {
   back();
   delay(300);
 
-  //sağa dön ve kontrol et
+  //Turn Right and Check
   turnRight();
   delay(300);
   isObstacle();
 
   if(obstacle) {
 
-    //hala engel varsa 
+    //If obstacle exists? 
     turnLeft();
     delay(600);
     back();
@@ -170,11 +170,11 @@ void loop() {
   
   isObstacle();
   if(!obstacle) {
-    //Engel Yok
+    //There is no OBSTACLE
     goAhead();
   }
   else{
-    //Engel Var
+    //There is OBSTACLE
     avoidObstacle();
   }
   delay(50);
